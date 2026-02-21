@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tandir Jo‘ja — Premium Quality</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- Sticky Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="ph-fill ph-fire heat-icon"></i>
+                <span class="logo-text">Tandir Jo‘ja</span>
+            </div>
+
+            <nav class="desktop-nav">
+                <a href="#hero" data-i18n="nav_home">Home</a>
+                <a href="#features" data-i18n="nav_features">Features</a>
+                <a href="#products" data-i18n="nav_menu">Menu</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher" id="langSwitcher">
+                    <span data-lang="uz_latn" class="active">UZ</span>
+                    <span data-lang="uz_cyrl">ЎЗ</span>
+                    <span data-lang="ru">RU</span>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-text" data-i18n="cart">Order</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal-up">
+                <div class="badge glow-badge">
+                    <span class="status-dot"></span>
+                    <span data-i18n="status_badge">Tandir Jo‘ja • fresh & hot</span>
+                </div>
+                <h1 class="hero-title" data-i18n="hero_title">Authentic Taste. <br>Minimal Wait.</h1>
+                <p class="hero-desc" data-i18n="hero_desc">Traditional recipe, modern service. The finest roasted
+                    chicken delivered to your doorstep.</p>
+                <div class="hero-buttons">
+                    <button class="primary-btn pulse-glow" id="heroOrderBtn">
+                        <span data-i18n="order_now">Order Now</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="features-container">
+                <div class="feature-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="feature-icon"><i class="ph ph-fire"></i></div>
+                    <h3 data-i18n="feat_1_title">Tandoor Baked</h3>
+                    <p data-i18n="feat_1_desc">Cooked in traditional clay ovens for that unmistakable smoky perfection.
+                    </p>
+                </div>
+                <div class="feature-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="feature-icon"><i class="ph ph-leaf"></i></div>
+                    <h3 data-i18n="feat_2_title">Premium Quality</h3>
+                    <p data-i18n="feat_2_desc">We source only the finest, fresh ingredients daily for the best taste.
+                    </p>
+                </div>
+                <div class="feature-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="feature-icon"><i class="ph ph-rocket-launch"></i></div>
+                    <h3 data-i18n="feat_3_title">Fast Delivery</h3>
+                    <p data-i18n="feat_3_desc">Hot and fresh, straight to your dining table in record time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section id="products" class="products-section">
+            <div class="section-header reveal-up">
+                <h2 class="section-title" data-i18n="menu_title">Our Menu</h2>
+                <p class="section-subtitle" data-i18n="menu_subtitle">Discover our signature dishes and refreshing
+                    beverages.</p>
+            </div>
+
+            <div class="products-carousel reveal-up" style="transition-delay: 0.2s;">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section class="cta-banner reveal-up">
+            <div class="cta-content">
+                <h2 data-i18n="cta_title">Hungry yet?</h2>
+                <p data-i18n="cta_desc">Experience the magic of authentic Tandoori today.</p>
+                <button class="secondary-btn"
+                    onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' });">
+                    <span data-i18n="order_now">Order Now</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="ph-fill ph-fire heat-icon"></i>
+                    <span class="logo-text">Tandir Jo‘ja</span>
+                </div>
+                <p class="footer-note" data-i18n="footer_note">Bringing tradition to the modern table.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="ph-fill ph-instagram-logo"></i></a>
+                <a href="#" class="social-icon"><i class="ph-fill ph-telegram-logo"></i></a>
+                <a href="#" class="social-icon"><i class="ph-fill ph-facebook-logo"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tandir Jo‘ja. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Order Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer" id="orderDrawer">
+        <div class="drawer-header">
+            <div>
+                <h3 data-i18n="drawer_title">Your Order</h3>
+                <p class="drawer-subtitle" data-i18n="drawer_subtitle">Complete your purchase</p>
+            </div>
+            <button class="close-btn" id="closeDrawer">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+
+        <div class="drawer-body">
+            <div class="cart-items" id="cartItemsList">
+                <div class="empty-cart-msg">
+                    <i class="ph ph-shopping-bag empty-icon"></i>
+                    <p data-i18n="empty_cart">Your cart is empty.</p>
+                </div>
+            </div>
+
+            <div class="cart-total" id="cartTotalContainer" style="display: none;">
+                <span data-i18n="total_items">Total Items:</span>
+                <strong id="cartTotalItems">0</strong>
+            </div>
+
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-section-title">
+                    <i class="ph ph-user"></i> <span data-i18n="checkout_title">Details</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="cName" required placeholder=" ">
+                    <label for="cName" data-i18n="label_name">Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="cPhone" placeholder=" " required>
+                    <label for="cPhone" data-i18n="label_phone">Phone Number</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="cAddress" required placeholder=" ">
+                    <label for="cAddress" data-i18n="label_address">Delivery Address</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="cNote" rows="2" placeholder=" "></textarea>
+                    <label for="cNote" data-i18n="label_note">Note (Optional)</label>
+                </div>
+
+                <!-- Honeypot (hidden) -->
+                <input type="text" name="_honey" style="display:none" value="">
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text" data-i18n="submit_order">Place Order</span>
+                    <i class="ph ph-paper-plane-right"></i>
+                    <div class="spinner" style="display:none;"></div>
+                </button>
+                <div class="form-feedback" id="formFeedback"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
