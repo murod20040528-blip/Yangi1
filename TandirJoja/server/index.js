@@ -95,7 +95,15 @@ app.post('/api/order', checkHoneypot, async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-    console.log(`Serving static files from ../public`);
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
+
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+        console.log(`Serving static files from ../public`);
+    });
+}
+
+module.exports = app;
