@@ -90,6 +90,7 @@ h4 {
     margin-bottom: var(--spacing-xs);
     background: linear-gradient(to right, #fff, #ccc);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
